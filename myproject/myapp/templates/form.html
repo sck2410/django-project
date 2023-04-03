@@ -1,0 +1,57 @@
+<!-- ດຶງ template ຈາກໄຟລ໌ base ມາໃຊ້ -->
+{% extends "base.html" %}
+
+<!-- ກຳນົດສ່ວນຂອງບລ໊ອກ title -->
+{% block title %}
+    <title>Form</title>
+{% endblock %}
+
+<!-- ກຳນົດສ່ວນຂອງບລ໊ອກ content -->
+{% block content %}
+<div class="container">
+    <h2>
+        ແບບຟອມລົງທະບຽນນັກສຶກສາ
+    </h2>
+    <form class="row g-3">
+        <div class="col-md-6">
+          <label for="fName" class="form-label">ຊື່</label>
+          <input type="text" class="form-control" id="fName" name="fName">
+        </div>
+        <div class="col-md-6">
+          <label for="lName" class="form-label">ນາມສະກຸນ</label>
+          <input type="text" class="form-control" id="lName" name="lName">
+        </div>
+        <div class="col-md-12">
+          <label for="email" class="form-label">ທີ່ຢູ່ອີເມວ</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+        </div>
+        <div class="col-12">
+          <label for="address" class="form-label">ທີ່ຢູ່ປະຈຸບັນ</label>
+          <input type="text" class="form-control" id="address" name="address">
+        </div>
+        <div class="col-md-4">
+          <label for="DOB" class="form-label">ວັນເດືອນປີເກີດ</label>
+          <input type="date" class="form-control" id="DOB" name="DOB">
+        </div>
+        <div class="col-md-4">
+          <label for="Register" class="form-label">ວັນເດືອນປີລົງທະບຽນ</label>
+          <input type="date" class="form-control" id="Register" name="Register">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="department" class="form-group mb-2">ສາຂາຮຽນ</label>
+          <select name="department" id="department" class="form-control">
+            <option value="Computer">Computer</option>
+            <option value="English">English</option>
+            <option value="Korean">Korean</option>
+            <option value="Accounting">Accounting</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">ລົງທະບຽນ</button>
+        </div>
+      </form>
+</div>
+{% endblock %}
+
+
+

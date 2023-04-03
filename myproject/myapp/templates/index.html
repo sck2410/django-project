@@ -1,0 +1,41 @@
+<!-- ດຶງ template ຈາກໄຟລ໌ base ມາໃຊ້ -->
+{% extends "base.html" %}
+
+<!-- ກຳນົດສ່ວນຂອງບລ໊ອກ title -->
+{% block title %}
+    <title>Home</title>
+{% endblock %}
+
+<!-- ກຳນົດສ່ວນຂອງບລ໊ອກ content -->
+{% block content %}
+  <div class="container">
+    <table class="table table-info table-hover">
+        <thead class="table table-danger table-hover">
+          <tr>
+            <th scope="col">ລະຫັດ</th>
+            <th scope="col">ຊື່</th>
+            <th scope="col">ນາມສະກຸນ</th>
+            <th scope="col">ອີເມວ</th>
+            <th scope="col">ທີ່ຢູ່</th>
+            <th scope="col">ວັນເດືອນປີເກີດ</th>
+            <th scope="col">ວັນເດືອນປີລົງທະບຽນ</th>
+            <th scope="col">ສາຂາຮຽນ</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in students %}
+            <tr>
+              <th scope="row">{{i.id}}</th>
+              <td>{{i.fName}}</td>
+              <td>{{i.lName}}</td>
+              <td>{{i.email}}</td>
+              <td>{{i.address}}</td>
+              <td>{{i.DOB}}</td>
+              <td>{{i.Register}}</td>
+              <td>{{i.department}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+  </div>
+{% endblock %}
